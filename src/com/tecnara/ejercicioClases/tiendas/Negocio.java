@@ -1,23 +1,24 @@
 package com.tecnara.ejercicioClases.tiendas;
 
-public class Negocio {
+public abstract class Negocio {
+
     private String nombre;
-    private int facturacion;
+    private float facturacion;
     private int empleados;
 
 
     public Negocio(String nombre, int facturacion, int empleados) {
-        this.nombre = nombre;
-        this.facturacion = facturacion;
-        this.empleados = empleados;
+        this.setNombre(nombre);
+        this.setFacturacion(facturacion);
+        this.setEmpleados(empleados);
     }
 
     public void abrir(){
         System.out.println("He abierto, soy " +  this.nombre);
     }
 
-    public void reponerEstantes(){
-        System.out.println("Estoy reponiendo el/la " + this.getClass().getSimpleName());
+    public float conseguirRatioNegocio(){
+        return this.getEmpleados()/this.getFacturacion();
     }
 
     public String getNombre() {
@@ -28,7 +29,7 @@ public class Negocio {
         this.nombre = nombre;
     }
 
-    public int getFacturacion() {
+    public float getFacturacion() {
         return facturacion;
     }
 

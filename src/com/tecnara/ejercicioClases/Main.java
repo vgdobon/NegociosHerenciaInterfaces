@@ -20,13 +20,18 @@ public class Main {
         Supermercado supermercado = new Supermercado("Merca Zaragoza",450000,25);
 
         taller.abrir();
-        taller.reponerEstantes();
+        System.out.println(taller.hacerPropaganda());
+        System.out.println("Ratio de facturacion por empleado" + taller.conseguirRatioNegocio());
 
         panaderia.abrir();
-        panaderia.reponerEstantes();
+        System.out.println(panaderia.hornedPan());
+        System.out.println("Ratio de facturacion por empleado" + panaderia.conseguirRatioNegocio());
 
         supermercado.abrir();
         supermercado.reponerEstantes();
+        System.out.println(supermercado.hacerPropaganda());
+        System.out.println(supermercado.hornedPan());
+        System.out.println("Ratio de facturacion por empleado" + supermercado.conseguirRatioNegocio());
     }
 
 
